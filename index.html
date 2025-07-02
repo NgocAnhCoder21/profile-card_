@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Profile Card & Card Slider</title>
+  <title>Profile Card & Card Slider | Combined</title>
   <!---Custom Css File!--->
   <link rel="stylesheet" href="style.css">
   <!-- Google Fonts for icons (Slider) -->
@@ -74,6 +74,22 @@
               <button class="card-button material-symbols-rounded">arrow_forward</button>
             </a>
           </li>
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="images/gamer.jpg" alt="Gamer" class="card-image">
+              <p class="badge badge-gamer">Gamer</p>
+              <h2 class="card-title">Lorem ipsum dolor sit explicabo adipisicing elit</h2>
+              <button class="card-button material-symbols-rounded">arrow_forward</button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="images/editor.jpg" alt="Editor" class="card-image">
+              <p class="badge badge-editor">Editor</p>
+              <h2 class="card-title">Lorem ipsum dolor sit explicabo adipisicing elit</h2>
+              <button class="card-button material-symbols-rounded">arrow_forward</button>
+            </a>
+          </li>
         </ul>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-prev"></div>
@@ -86,5 +102,24 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- Custom script nếu có -->
   <script src="script.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+  </script>
 </body>
 </html>
